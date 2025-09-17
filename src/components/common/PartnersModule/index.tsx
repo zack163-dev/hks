@@ -35,7 +35,7 @@ export default function PartnersModule(props?: IPartnersModuleProps) {
           <TitleWithLine title={title} />
           <LogoLoop
             className="mt-9"
-            logos={items.map((logo, i) => {
+            logos={items.map((_, i) => {
               return {
                 node: (
                   <div

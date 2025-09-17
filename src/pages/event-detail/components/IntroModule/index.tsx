@@ -2,7 +2,6 @@ import clsx from "clsx";
 import { eventDetails } from "@/config";
 import Bignumber from "bignumber.js";
 import route1 from "@/assets/route1.png";
-import route2 from "@/assets/route1.png";
 
 interface IIntroModuleProps {
   className?: string;

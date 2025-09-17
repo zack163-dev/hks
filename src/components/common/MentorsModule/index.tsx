@@ -48,7 +48,7 @@ export default function MentorsModule(props?: IMentorsModuleProps) {
       </div>
       <div className="w-12 h-1 gradient-bg mt-1"></div>
       <div className="flex mt-8 gap-8">
-        {mentorsList.map((mentor, index) => {
+        {mentorsList.map((_, index) => {
           return (
             <div className="flex items-center gap-8">
               <div

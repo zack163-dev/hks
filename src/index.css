@@ -1,0 +1,20 @@
+@font-face {
+  font-family: "KronaOne";
+  src: url("./assets/fonts/KronaOne.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("./assets/fonts/Outfit.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  background-color: black;
+  font-family: "Outfit", sans-serif;
+}

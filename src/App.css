@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@theme {
+  --font-krona-one: "KronaOne", sans-serif;
+  --font-outfit: "Outfit", sans-serif;
+}
+
+@utility font-kronaOne {
+  font-family: var(--font-krona-one);
+}
+
+@utility font-outfit {
+  font-family: var(--font-outfit);
+}
+
+@keyframes shine {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}
+
+@keyframes float-up-down {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@utility animate-shine {
+  animation: shine 2s linear infinite;
+}
+
+@utility animate-float-up-down {
+  animation: float-up-down 2s ease-in-out infinite;
+}
+
+@layer components {
+  .gradient-text {
+    @apply bg-gradient-to-r to-[#C4F5F8] from-[#8CF6A6] bg-clip-text text-transparent;
+  }
+}
+
+@layer components {
+  .gradient-text-1 {
+    @apply bg-gradient-to-r to-[#F7F7F7] from-[#8CF6A6] bg-clip-text text-transparent;
+  }
+}
+
+@layer components {
+  .gradient-bg {
+    @apply bg-gradient-to-r from-[#8CF6A6] to-[#C4F5F8];
+  }
+}
+
+@layer components {
+  .gradient-bg-1 {
+    @apply bg-gradient-to-r from-[#8CF6A6] to-[#F7F7F7];
+  }
+}

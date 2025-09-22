@@ -3,7 +3,7 @@ import JudgesModule from "./components/JudgesModule";
 import ScheduleModule from "./components/ScheduleModule";
 import StepsModule from "./components/StepsModule";
 import TracksModule from "./components/TracksModule";
-import MentorsModule from "../../components/common/MentorsModule";
+import MentorsModuleNew from "../../components/common/MentorsModuleNew";
 import IntroModule from "./components/IntroModule";
 import ShowCaseModule from "./components/ShowCaseModule";
 import VideosModule from "./components/VideosModule";
@@ -11,6 +11,7 @@ import { routeMap } from "@/config";
 import { ProgramStatus } from "@/types";
 import { useMemo } from "react";
 import PartnersModule from "@/components/common/PartnersModule";
+import mask2 from "@/assets/shadow2.png";
 
 export default function EventDetailPage() {
   const { id } = useParams();
@@ -23,12 +24,19 @@ export default function EventDetailPage() {
   }, [id]);
 
   return (
-    <div>
-      <IntroModule id={id || ""} />
+    <div className="relative">
+      {!isHistoryData && (
+        <img
+          src={mask2}
+          alt=""
+          className="absolute left-[23px] top-[1051px] w-[1927px] h-[2556px]"
+        />
+      )}
+      <IntroModule id={id || ""} isHistoryData={isHistoryData} />
       <StepsModule id={id || ""} />
       {isHistoryData && (
         <>
-          <ShowCaseModule />
+          <ShowCaseModule className="mt-[82px]" />
           <VideosModule className="mt-[135px]" />
           <PartnersModule className="mt-[184px]" />
         </>
@@ -40,7 +48,7 @@ export default function EventDetailPage() {
           <JudgesModule className="mt-[126px]" />
         </>
       )}
-      <MentorsModule
+      <MentorsModuleNew
         className="mt-[164px] mb-[100px]"
         title={isHistoryData ? "MENTORS" : "PARTNERS"}
       />

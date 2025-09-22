@@ -86,21 +86,21 @@ const medias: IMedias[] = [
 export default function VideosModule(props?: IVideosModuleProps) {
   const { className } = props || {};
   return (
-    <div className={clsx("w-[1024px] mx-auto", className)}>
+    <div className={clsx("w-[1088px] mx-auto", className)}>
       <h3 className="text-[24px] leading-[1.36] font-kronaOne gradient-text">
         Videos & Articles
       </h3>
-      <div className="mt-9 grid grid-cols-3 gap-8">
+      <div className="mt-9 grid grid-cols-3 gap-x-[49px] gap-y-6">
         {medias.map((media) => {
           return media.type === "video" ? (
             <video
               key={media.id}
               src={media.mediaUrl}
-              className="h-[180px] rounded-[14.61px]"
+              className="rounded-[14.61px]"
               controls
             ></video>
           ) : (
-            <div className="h-[180px] rounded-[14.61px] px-6 py-4 bg-[#171717]">
+            <div className="rounded-[14.61px] px-6 py-4 bg-[#171717]">
               <h4 className="truncate text-[16px] leading-[20.63px] font-medium text-white">
                 {media.title}
               </h4>

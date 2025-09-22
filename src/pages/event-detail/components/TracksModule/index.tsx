@@ -66,7 +66,7 @@ export default function TracksModule(props?: ITracksModuleProps) {
         {tracksData.map((track) => {
           return (
             <div
-              className="bg-[#141a1c] px-6 py-4 rounded-[14.61px]"
+              className="bg-[rgba(255_255_255_/_0.08)] shadow-[0px_3.44px_8.6px_0px_rgba(0,0,0,0.1)] px-6 py-4 rounded-[14.61px]"
               key={track.id}
             >
               <div className="flex items-center justify-between gap-1">

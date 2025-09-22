@@ -17,7 +17,7 @@ export default function CommonInput(props?: ICommonInputProps) {
   return (
     <div
       className={clsx(
-        "w-[258px] h-8 p-[1px] gradient-bg-1 rounded-[16px] overflow-hidden",
+        "w-[258px] h-9 p-[1px] gradient-bg-1 rounded-[16px] overflow-hidden",
         className
       )}
     >

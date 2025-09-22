@@ -1,6 +1,6 @@
 import locationIcon from "@/assets/location.svg";
 import sitesMap from "@/assets/sites-map.png";
-import mask1 from "@/assets/mask-1.png";
+import mask1 from "@/assets/shadow1.png";
 import clsx from "clsx";
 import styles from "./styles.module.scss";
 import { useNavigate } from "react-router-dom";
@@ -98,7 +98,7 @@ export default function SitesModule(props: ISitesModuleProps) {
                 >
                   <div
                     className={clsx(
-                      "mx-auto text-[12px] w-fit text-center leading-[1.36] text-[#6E6E6E] font-kronaOne px-4 py-2 rounded-[24px] z-5",
+                      "mx-auto text-[12px] w-fit text-center leading-[1.36] text-black font-kronaOne px-4 py-2 rounded-[24px] z-5",
                       styles.countryLabel
                     )}
                   >
@@ -128,7 +128,7 @@ export default function SitesModule(props: ISitesModuleProps) {
             </div>
           );
         })}
-      <div className="flex items-center gap-2 justify-center">
+      <div className="flex items-center gap-2 justify-center mt-[81px]">
         <img src={locationIcon} alt="" className="w-8 h-8" />
         <span className="gradient-text text-[24px] leading-[1.36] font-kronaOne">
           Hackathon Sites

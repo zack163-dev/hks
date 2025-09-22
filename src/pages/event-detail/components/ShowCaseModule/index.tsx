@@ -71,7 +71,7 @@ export default function ShowCaseModule(props?: IShowCaseModuleProps) {
   }, [searchValue]);
 
   return (
-    <div className={clsx("w-[1120px] mx-auto", className)}>
+    <div className={clsx("w-[1088px] mx-auto", className)}>
       <div className="flex items-center justify-between">
         <h3 className="text-[24px] leading-[1.36] gradient-text font-kronaOne">
           SHOWCASE
@@ -89,7 +89,7 @@ export default function ShowCaseModule(props?: IShowCaseModuleProps) {
           return (
             <SwiperSlide key={item.id}>
               <div
-                className="flex-shrink-0 rounded-2xl overflow-hidden bg-white w-[268px] h-[266px] relative"
+                className="flex-shrink-0 rounded-2xl overflow-hidden bg-white w-[260px] h-[266px] relative"
                 key={index}
               >
                 <img

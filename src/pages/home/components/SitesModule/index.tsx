@@ -1,6 +1,5 @@
 import locationIcon from "@/assets/location.svg";
 import sitesMap from "@/assets/sites-map.png";
-import mask1 from "@/assets/shadow1.png";
 import clsx from "clsx";
 import styles from "./styles.module.scss";
 import { useNavigate } from "react-router-dom";
@@ -72,11 +71,6 @@ export default function SitesModule(props: ISitesModuleProps) {
   return (
     <div className={clsx("relative", className)}>
       <img
-        src={mask1}
-        alt=""
-        className="w-[1501px] h-[633px] left-[23px] -bottom-[199px] absolute"
-      />
-      <img
         src={sitesMap}
         alt="sitesMap"
         className="w-full object-cover bg-no-repeat"
@@ -98,7 +92,10 @@ export default function SitesModule(props: ISitesModuleProps) {
                 >
                   <div
                     className={clsx(
-                      "mx-auto text-[12px] w-fit text-center leading-[1.36] text-black font-kronaOne px-4 py-2 rounded-[24px] z-5",
+                      "mx-auto text-[12px] w-fit text-center leading-[1.36] font-kronaOne px-4 py-2 rounded-[24px] z-5",
+                      item.status === ProgramStatus.Completed
+                        ? "text-[#6e6e6e]"
+                        : "text-black",
                       styles.countryLabel
                     )}
                   >

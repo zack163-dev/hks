@@ -2,30 +2,22 @@
 import { Outlet, useLocation } from "react-router-dom";
 import Header from "./header";
 import Footer from "./footer";
-import LeftPic from "@/assets/left.png";
-import RightPic from "@/assets/right.png";
+import backImage from "@/assets/back.png";
 
 export default function Layout() {
   const location = useLocation();
   const isHome = location.pathname === "/";
 
   return (
-    <div className="relative min-w-[1440px] mx-auto">
+    <div className="relative min-w-[1440px] mx-auto overflow-hidden">
       {isHome && (
         <img
-          src={LeftPic}
-          alt=""
-          className="absolute left-0 bottom-0 h-[238px]"
+          src={backImage}
+          alt="Background"
+          className="absolute top-[1219px] left-0 w-full h-[1950px] object-fill z-[-1]"
         />
       )}
-      {isHome && (
-        <img
-          src={RightPic}
-          alt=""
-          className="absolute right-0 bottom-[1013px] h-[477px]"
-        />
-      )}
-      <div className="flex flex-col mx-auto w-[1440px] min-h-screen">
+      <div className="flex flex-col min-h-screen">
         <Header />
         <main className="flex-1">
           <Outlet />

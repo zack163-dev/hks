@@ -11,7 +11,6 @@ import { routeMap } from "@/config";
 import { ProgramStatus } from "@/types";
 import { useMemo } from "react";
 import PartnersModule from "@/components/common/PartnersModule";
-import MentorsModule from "@/components/common/MentorsModule";
 
 export default function EventDetailPage() {
   const { id } = useParams();
@@ -25,8 +24,8 @@ export default function EventDetailPage() {
 
   return (
     <div className="relative">
-      <IntroModule id={id || ""} isHistoryData={isHistoryData} />
-      <StepsModule id={id || ""} />
+      <IntroModule id={id || ""} />
+      <StepsModule id={id || ""} className="mt-[61px]" />
       {isHistoryData && (
         <>
           <ShowCaseModule className="mt-[82px]" />
@@ -40,10 +39,9 @@ export default function EventDetailPage() {
       )}
       {!isHistoryData && (
         <>
-          <ScheduleModule className="mt-[112px]" id={id || ""} />
-          <TracksModule className="mt-[138px]" />
-          <JudgesModule className="mt-[126px]" />
-          <MentorsModule className="mt-[164px] mb-[100px]" title={"PARTNERS"} />
+          <ScheduleModule className="mt-[134px]" id={id || ""} />
+          <TracksModule className="mt-[140px]" />
+          <JudgesModule className="mt-[160px] mb-[160px]" />
         </>
       )}
     </div>

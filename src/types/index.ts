@@ -19,18 +19,17 @@ export interface IEventDetail {
   id: number | string;
   title: string;
   description: string;
-  totalPrizeUsd: number;
-  prizeToken: string;
+  prizeUsd: string;
+  startDate: string;
 }
 
-export interface IDayData {
-  date: number;
-  startTime: number;
-  endTime: number;
+export interface IScheduleItem {
+  timeRange: string;
   content: string;
-  subContent?: string;
 }
-
 export interface IScheduleData {
-  dayData: IDayData[];
+  onlineTime: string;
+  onSiteTime: string;
+  onSite: IScheduleItem[];
+  online: IScheduleItem[];
 }

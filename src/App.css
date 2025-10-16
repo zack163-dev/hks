@@ -1,16 +1,21 @@
 @import "tailwindcss";
 
 @theme {
-  --font-krona-one: "KronaOne", sans-serif;
-  --font-outfit: "Outfit", sans-serif;
+  --font-DMSansRegular: "DMSans-Regular", sans-serif;
+  --font-DMSansMedium: "DMSans-Medium", sans-serif;
+  --font-DMSansBold: "DMSans-Bold", sans-serif;
 }
 
-@utility font-kronaOne {
-  font-family: var(--font-krona-one);
+@utility font-DMSansRegular {
+  font-family: var(--font-DMSansRegular);
 }
 
-@utility font-outfit {
-  font-family: var(--font-outfit);
+@utility font-DMSansMedium {
+  font-family: var(--font-DMSansMedium);
+}
+
+@utility font-DMSansBold {
+  font-family: var(--font-DMSansBold);
 }
 
 @keyframes shine {
@@ -22,13 +27,22 @@
   }
 }
 
+@keyframes glare-sweep {
+  0% {
+    background-position: -100% -100%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
 @keyframes float-up-down {
   0%,
   100% {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-5px);
+    transform: translateY(-3px);
   }
 }
 
@@ -42,7 +56,7 @@
 
 @layer components {
   .gradient-text {
-    @apply bg-gradient-to-r to-[#C4F5F8] from-[#8CF6A6] bg-clip-text text-transparent;
+    @apply bg-gradient-to-r to-[#C4F5F8] from-[#58FF98] bg-clip-text text-transparent;
   }
 }
 
@@ -54,12 +68,42 @@
 
 @layer components {
   .gradient-bg {
-    @apply bg-gradient-to-r from-[#8CF6A6] to-[#C4F5F8];
+    @apply bg-gradient-to-r from-[#58FF98] to-[#C4F5F8];
   }
 }
 
 @layer components {
   .gradient-bg-1 {
     @apply bg-gradient-to-r from-[#8CF6A6] to-[#F7F7F7];
+  }
+}
+
+@layer components {
+  .gradient-bg-2 {
+    @apply bg-gradient-to-b from-[#58FF98] to-[#2C864E];
+  }
+}
+
+@layer components {
+  .gradient-bg-4 {
+    @apply bg-gradient-to-b from-[rgba(88_255_152_/_0.5)] to-[rgba(88_255_152_/_0.2)];
+  }
+}
+
+@layer components {
+  .gradient-bg-3 {
+    @apply bg-gradient-to-r from-[#58FF98] to-[#2F8E53];
+  }
+}
+
+@layer components {
+  .gradient-border {
+    @apply border-transparent [border-image:linear-gradient(90deg,rgba(47,135,81,0)_0%,#1D5432_50%,rgba(65,186,111,0)_100%)_1];
+  }
+}
+
+@layer components {
+  .gradient-border-2 {
+    @apply border-transparent [border-image:linear-gradient(90deg,rgba(83,83,83,0.5)_0%,#535353_50%,rgba(83,83,83,0.5)_100%)_1];
   }
 }

@@ -1,9 +1,23 @@
 import type { IEventDetail, IRouteMap, IScheduleData } from "@/types";
-import hamburger from "@/assets/food/us-hamburger.png";
-import usImg from "@/assets/country/us.png";
-import fries from "@/assets/food/uk-fries.png";
-import ukImg from "@/assets/country/uk.png";
-import { createTimestamp } from "@/utils";
+import russiaFood from "@/assets/food/russia.png";
+import russiaFlag from "@/assets/country/russia.png";
+import indiaFood from "@/assets/food/india.png";
+import indiaFlag from "@/assets/country/india.png";
+import ukFood from "@/assets/food/uk.png";
+import ukFlag from "@/assets/country/uk.png";
+import usFood from "@/assets/food/us.png";
+import usFlag from "@/assets/country/us.png";
+import chinaFood from "@/assets/food/china.png";
+import chinaFlag from "@/assets/country/china.png";
+import japanFood from "@/assets/food/japan.png";
+import japanFlag from "@/assets/country/japan.png";
+import koreaFood from "@/assets/food/korea.png";
+import koreaFlag from "@/assets/country/korea.png";
+import vietnamFood from "@/assets/food/vietnam.png";
+import vietnamFlag from "@/assets/country/vietnam.png";
+
+export const startDate = "OCT 2025";
+export const prize = "100,000";
 
 export const routeMap: IRouteMap[] = [
   {
@@ -31,21 +45,21 @@ export const routeMap: IRouteMap[] = [
     left: 0,
   },
   {
-    id: "us",
-    country: "United States",
-    countryImg: usImg,
-    status: 2,
-    img: hamburger,
-    top: 275,
-    left: 408,
-  },
-  {
-    id: 5,
+    id: 4,
     country: "",
     status: -1,
     img: "",
     top: 0,
     left: 0,
+  },
+  {
+    id: "russia",
+    country: "Russia",
+    countryImg: russiaFlag,
+    status: 1,
+    img: russiaFood,
+    top: 259,
+    left: 415,
   },
   {
     id: 6,
@@ -72,13 +86,13 @@ export const routeMap: IRouteMap[] = [
     left: 0,
   },
   {
-    id: "uk",
-    country: "U.K.",
-    countryImg: ukImg,
-    status: 1,
-    img: fries,
-    top: 339,
-    left: 505,
+    id: "vietnam",
+    country: "Vietnam",
+    countryImg: vietnamFlag,
+    status: 0,
+    img: vietnamFood,
+    top: 301,
+    left: 522,
   },
   {
     id: 10,
@@ -98,11 +112,12 @@ export const routeMap: IRouteMap[] = [
   },
   {
     id: 12,
-    country: "",
-    status: -1,
-    img: "",
-    top: 368,
-    left: 656,
+    country: "Japan",
+    countryImg: japanFlag,
+    status: 0,
+    img: japanFood,
+    top: 335,
+    left: 705,
   },
   {
     id: 13,
@@ -138,11 +153,12 @@ export const routeMap: IRouteMap[] = [
   },
   {
     id: 17,
-    country: "",
-    status: -1,
-    img: "",
-    top: 434,
-    left: 754,
+    country: "Korea",
+    countryImg: koreaFlag,
+    status: 0,
+    img: koreaFood,
+    top: 408,
+    left: 767,
   },
   {
     id: 18,
@@ -170,11 +186,12 @@ export const routeMap: IRouteMap[] = [
   },
   {
     id: 21,
-    country: "",
-    status: -1,
-    img: "",
-    top: 0,
-    left: 0,
+    country: "United States",
+    countryImg: usFlag,
+    status: 0,
+    img: usFood,
+    top: 443,
+    left: 948,
   },
   {
     id: 22,
@@ -202,11 +219,12 @@ export const routeMap: IRouteMap[] = [
   },
   {
     id: 25,
-    country: "",
-    status: -1,
-    img: "",
-    top: 0,
-    left: 0,
+    country: "India",
+    countryImg: indiaFlag,
+    status: 0,
+    img: indiaFood,
+    top: 387,
+    left: 1090,
   },
   {
     id: 26,
@@ -242,11 +260,12 @@ export const routeMap: IRouteMap[] = [
   },
   {
     id: 30,
-    country: "",
-    status: -1,
-    img: "",
-    top: 0,
-    left: 0,
+    country: "China",
+    countryImg: chinaFlag,
+    status: 0,
+    img: chinaFood,
+    top: 316,
+    left: 1141,
   },
   {
     id: 31,
@@ -282,11 +301,12 @@ export const routeMap: IRouteMap[] = [
   },
   {
     id: 35,
-    country: "",
-    status: -1,
-    img: "",
-    top: 0,
-    left: 0,
+    country: "United Kingdom",
+    countryImg: ukFlag,
+    status: 0,
+    img: ukFood,
+    top: 282,
+    left: 966,
   },
   {
     id: 36,
@@ -308,185 +328,62 @@ export const routeMap: IRouteMap[] = [
 
 export const eventDetails: IEventDetail[] = [
   {
-    id: "us",
-    title: "United States",
+    id: "russia",
+    title: "Russia",
     description:
       "Join the premier technology competition Compete, innovate, and win",
-    totalPrizeUsd: 100000,
-    prizeToken: "GAS",
-  },
-  {
-    id: "uk",
-    title: "United States",
-    description:
-      "Join the premier technology competition Compete, innovate, and win",
-    totalPrizeUsd: 100000,
-    prizeToken: "GAS",
+    prizeUsd: "7,000",
+    startDate: "Oct 2025",
   },
 ];
 
 export const scheduleData: {
   id: string;
-  data: IScheduleData[];
+  data: IScheduleData;
 }[] = [
   {
-    id: "us",
-    data: [
-      {
-        dayData: [
-          {
-            date: createTimestamp(2025, 1, 4, 0, 0), // 2025-2-4 的时间戳
-            startTime: createTimestamp(2025, 1, 4, 9, 0), // 2025-2-4 上午9:00 的时间戳
-            endTime: createTimestamp(2025, 1, 4, 10, 0), // 2025-2-4 上午10:00 的时间戳
-            content: "Event Registration OPENS!",
-            subContent: "",
-          },
-          {
-            date: createTimestamp(2025, 1, 4, 0, 0), // 2025-2-4 的时间戳
-            startTime: createTimestamp(2025, 1, 4, 10, 0), // 2025-2-4 上午10:00 的时间戳
-            endTime: createTimestamp(2025, 1, 4, 11, 0), // 2025-2-4 上午11:00 的时间戳
-            content: "Event Registration OPENS!",
-            subContent: "Welcome & Introduction",
-          },
-          {
-            date: createTimestamp(2025, 1, 4, 0, 0), // 2025-2-4 的时间戳
-            startTime: createTimestamp(2025, 1, 4, 11, 0), // 2025-2-4 上午11:00 的时间戳
-            endTime: createTimestamp(2025, 1, 4, 12, 0), // 2025-2-4 上午12:00 的时间戳
-            content: "Talks & Panels",
-            subContent:
-              "Sign up to secure your spot and receive event details.",
-          },
-          {
-            date: createTimestamp(2025, 1, 4, 0, 0), // 2025-2-4 的时间戳
-            startTime: createTimestamp(2025, 1, 4, 12, 0), // 2025-2-4 上午12:00 的时间戳
-            endTime: createTimestamp(2025, 1, 4, 14, 0), // 2025-2-4 上午14:00 的时间戳
-            content: "Lunch Break",
-            subContent:
-              "Sign up to secure your spot and receive event details.",
-          },
-          {
-            date: createTimestamp(2025, 1, 4, 0, 0), // 2025-2-4 的时间戳
-            startTime: createTimestamp(2025, 1, 4, 14, 0), // 2025-2-4 下午14:00 的时间戳
-            endTime: createTimestamp(2025, 1, 4, 17, 0), // 2025-2-4 下午17:00 的时间戳
-            content: "Talks & Panels",
-          },
-          {
-            date: createTimestamp(2025, 1, 4, 0, 0), // 2025-2-4 的时间戳
-            startTime: createTimestamp(2025, 1, 4, 17, 0), // 2025-2-4 下午17:00 的时间戳
-            endTime: createTimestamp(2025, 1, 4, 18, 0), // 2025-2-4 下午18:00 的时间戳
-            content: "Happy Hour",
-          },
-        ],
-      },
-      {
-        dayData: [
-          {
-            date: createTimestamp(2025, 1, 5, 0, 0),
-            startTime: createTimestamp(2025, 1, 5, 9, 0),
-            endTime: createTimestamp(2025, 1, 5, 10, 0),
-            content: "Event Registration OPENS!",
-            subContent: "",
-          },
-          {
-            date: createTimestamp(2025, 1, 5, 0, 0),
-            startTime: createTimestamp(2025, 1, 5, 10, 0),
-            endTime: createTimestamp(2025, 1, 5, 11, 0),
-            content: "Event Registration OPENS!",
-            subContent: "Welcome & Introduction",
-          },
-        ],
-      },
-      {
-        dayData: [
-          {
-            date: createTimestamp(2025, 1, 6, 0, 0),
-            startTime: createTimestamp(2025, 1, 6, 9, 0),
-            endTime: createTimestamp(2025, 1, 6, 10, 0),
-            content: "Event Registration OPENS!",
-            subContent: "",
-          },
-        ],
-      },
-    ],
-  },
-  {
-    id: "uk",
-    data: [
-      {
-        dayData: [
-          {
-            date: createTimestamp(2025, 1, 4, 0, 0), // 2025-2-4 的时间戳
-            startTime: createTimestamp(2025, 1, 4, 9, 0), // 2025-2-4 上午9:00 的时间戳
-            endTime: createTimestamp(2025, 1, 4, 10, 0), // 2025-2-4 上午10:00 的时间戳
-            content: "Event Registration OPENS!",
-            subContent: "",
-          },
-          {
-            date: createTimestamp(2025, 1, 4, 0, 0), // 2025-2-4 的时间戳
-            startTime: createTimestamp(2025, 1, 4, 10, 0), // 2025-2-4 上午10:00 的时间戳
-            endTime: createTimestamp(2025, 1, 4, 11, 0), // 2025-2-4 上午11:00 的时间戳
-            content: "Event Registration OPENS!",
-            subContent: "Welcome & Introduction",
-          },
-          {
-            date: createTimestamp(2025, 1, 4, 0, 0), // 2025-2-4 的时间戳
-            startTime: createTimestamp(2025, 1, 4, 11, 0), // 2025-2-4 上午11:00 的时间戳
-            endTime: createTimestamp(2025, 1, 4, 12, 0), // 2025-2-4 上午12:00 的时间戳
-            content: "Talks & Panels",
-            subContent:
-              "Sign up to secure your spot and receive event details.",
-          },
-          {
-            date: createTimestamp(2025, 1, 4, 0, 0), // 2025-2-4 的时间戳
-            startTime: createTimestamp(2025, 1, 4, 12, 0), // 2025-2-4 上午12:00 的时间戳
-            endTime: createTimestamp(2025, 1, 4, 14, 0), // 2025-2-4 上午14:00 的时间戳
-            content: "Lunch Break",
-            subContent:
-              "Sign up to secure your spot and receive event details.",
-          },
-          {
-            date: createTimestamp(2025, 1, 4, 0, 0), // 2025-2-4 的时间戳
-            startTime: createTimestamp(2025, 1, 4, 14, 0), // 2025-2-4 下午14:00 的时间戳
-            endTime: createTimestamp(2025, 1, 4, 17, 0), // 2025-2-4 下午17:00 的时间戳
-            content: "Talks & Panels",
-          },
-          {
-            date: createTimestamp(2025, 1, 4, 0, 0), // 2025-2-4 的时间戳
-            startTime: createTimestamp(2025, 1, 4, 17, 0), // 2025-2-4 下午17:00 的时间戳
-            endTime: createTimestamp(2025, 1, 4, 18, 0), // 2025-2-4 下午18:00 的时间戳
-            content: "Happy Hour",
-          },
-        ],
-      },
-      {
-        dayData: [
-          {
-            date: createTimestamp(2025, 1, 5, 0, 0),
-            startTime: createTimestamp(2025, 1, 5, 9, 0),
-            endTime: createTimestamp(2025, 1, 5, 10, 0),
-            content: "Event Registration OPENS!",
-            subContent: "",
-          },
-          {
-            date: createTimestamp(2025, 1, 5, 0, 0),
-            startTime: createTimestamp(2025, 1, 5, 10, 0),
-            endTime: createTimestamp(2025, 1, 5, 11, 0),
-            content: "Event Registration OPENS!",
-            subContent: "Welcome & Introduction",
-          },
-        ],
-      },
-      {
-        dayData: [
-          {
-            date: createTimestamp(2025, 1, 6, 0, 0),
-            startTime: createTimestamp(2025, 1, 6, 9, 0),
-            endTime: createTimestamp(2025, 1, 6, 10, 0),
-            content: "Event Registration OPENS!",
-            subContent: "",
-          },
-        ],
-      },
-    ],
+    id: "russia",
+    data: {
+      onlineTime: "2025.10.20-11.20",
+      onSiteTime: "2025.11.23",
+      onSite: [
+        {
+          timeRange: "09:00-10:00",
+          content: "Registration and Breakfast with Networking.",
+        },
+        {
+          timeRange: "10:00-10:15",
+          content: "Opening Speech: Why Neo, SpoonOS, why AI agents.",
+        },
+        {
+          timeRange: "10:15-13:00",
+          content:
+            "Hackathon-Finalizing projects and last minute consulting sessions with SpoonOS experts.",
+        },
+        {
+          timeRange: "13:00-14:00",
+          content: "Lunch Break.",
+        },
+        {
+          timeRange: "14:00-14:30",
+          content: "Panel Discussion 1 - Emerging trends in AI agents.",
+        },
+        {
+          timeRange: "14:30-15:00",
+          content:
+            "Panel Discussion 2 - How to use agent frameworks to build AI + Web3 products.",
+        },
+        {
+          timeRange: "15:00-18:00",
+          content:
+            "Demo Time. Each team will have 5 minutes to present their project, followed by a 3-minute Q&A session.",
+        },
+        {
+          timeRange: "18:00-19:00",
+          content: "Winner Announcement Ceremony and networking drinks.",
+        },
+      ],
+      online: [],
+    },
   },
 ];

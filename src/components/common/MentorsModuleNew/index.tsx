@@ -10,66 +10,33 @@ interface IMentor {
   name: string;
   image: string;
   intro: string;
-  author: string;
   key: string | number;
 }
 
 const mentorsList: IMentor[] = [
   {
     key: 1,
-    name: "Naina Raisinghani",
+    name: "Yuxi Li",
     image: judges,
-    intro: "Senior Product Manager",
-    author: "Google DeepMind",
+    intro: "PhD in Computer Science at University of Alberta",
   },
   {
     key: 2,
-    name: "Naina Raisinghani",
+    name: "Kumar Shridhar",
     image: judges,
-    intro: "Senior Product Manager",
-    author: "Google DeepMind",
+    intro: "PHD @ ETH Zürich in Machine Learning",
   },
   {
     key: 3,
-    name: "Naina Raisinghani",
+    name: "Sabina",
     image: judges,
-    intro: "Senior Product Manager",
-    author: "Google DeepMind",
+    intro: "Professor in University of California Berkeley, Amazon Scholar",
   },
   {
     key: 4,
-    name: "Naina Raisinghani",
+    name: "Kumar Shridhar",
     image: judges,
-    intro: "Senior Product Manager",
-    author: "Google DeepMind",
-  },
-  {
-    key: 5,
-    name: "Naina Raisinghani",
-    image: judges,
-    intro: "Senior Product Manager",
-    author: "Google DeepMind",
-  },
-  {
-    key: 6,
-    name: "Naina Raisinghani",
-    image: judges,
-    intro: "Senior Product Manager",
-    author: "Google DeepMind",
-  },
-  {
-    key: 7,
-    name: "Naina Raisinghani",
-    image: judges,
-    intro: "Senior Product Manager",
-    author: "Google DeepMind",
-  },
-  {
-    key: 8,
-    name: "Naina Raisinghani",
-    image: judges,
-    intro: "Senior Product Manager",
-    author: "Google DeepMind",
+    intro: "Master of International Policy @ Stanford FSI",
   },
 ];
 
@@ -78,35 +45,31 @@ export default function MentorsModule(props?: IMentorsModuleProps) {
   return (
     <div
       className={clsx(
-        "w-[916px] mx-auto flex flex-col items-center",
+        "w-[1152px] mx-auto flex flex-col items-center",
         className
       )}
     >
-      <div className="text-[18px] leading-[1.36] font-kronaOne text-white">
+      <div className="text-[64px] leading-[1] font-DMSansBold font-bold gradient-text">
         {title ?? "MENTORS"}
       </div>
-      <div className="w-12 h-1 gradient-bg mt-1"></div>
-      <div className="grid grid-cols-4 mt-8 gap-x-[17.3px] gap-y-6">
+      <div className="grid grid-cols-4 mt-12 gap-6">
         {mentorsList.map((item) => {
           return (
-            <div
-              className="flex flex-col items-center px-8 py-6 rounded-[14.6px] object-cover bg-[rgba(255_255_255_/_0.08)] shadow-[0px_3.44px_8.6px_0px_rgba(0,0,0,0.1)]"
-              key={item.key}
-            >
-              <img
-                src={item.image}
-                alt={item.name}
-                className="w-[60px] h-[60px] rounded-full"
-              />
-              <span className="text-white text-[16px] leading-[20.63px] mt-4 truncate">
-                {item.name}
-              </span>
-              <span className="text-[#B3B3B3] text-[14px] leading-[20.63px] mt-[6px]">
-                {item.intro}
-              </span>
-              <span className="text-[#B3B3B3] text-[14px] leading-[20.63px]">
-                @{item.author}
-              </span>
+            <div className="gradient-bg-2 p-[1px] rounded-[10px]">
+              <div className="bg-black rounded-[10px]">
+                <div
+                  className="flex flex-col h-[291px] gap-4 items-center text-center p-8 rounded-[10px] bg-gradient-to-b from-[rgba(70,70,70,0.5)] via-[rgba(70,70,70,0.3)] to-[rgba(70,70,70,0.2)] shadow-[inset_0_0_10px_0_rgba(0,0,0,0.25)] backdrop-blur-[14.7px]"
+                  key={item.key}
+                >
+                  <div className="w-[100px] h-[100px] rounded-full bg-[#7C7C7C]" />
+                  <span className="text-[#D9D9D9] leading-[1] text-[24px] font-DMSansBold font-bold truncate">
+                    {item.name}
+                  </span>
+                  <span className="text-[#D9D9D9] text-[16px] leading-[1.3] font-DMSansMedium font-medium line-clamp-3">
+                    {item.intro}
+                  </span>
+                </div>
+              </div>
             </div>
           );
         })}

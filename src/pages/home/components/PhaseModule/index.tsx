@@ -48,7 +48,7 @@ export default function PhaseModule(props?: IPhaseModuleProps) {
       <div className="grid grid-col gap-8">
         {dataList.map((item, index) => {
           return (
-            <div className="flex gap-8 items-center text-[#D9D9D9]" key={index}>
+            <div className="flex gap-8 items-start text-[#D9D9D9]" key={index}>
               <div className="flex items-center gap-[10px] w-[67px]">
                 <img
                   src={item.labelImg}

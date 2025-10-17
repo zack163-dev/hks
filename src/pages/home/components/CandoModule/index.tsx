@@ -34,7 +34,7 @@ export default function CandoModule(props: ICandoModuleProps) {
           return (
             <div key={index} className="gradient-bg-2 rounded-[10px] p-[1px]">
               <div className="w-full h-full bg-black rounded-[10px]">
-                <div className="rounded-[10px] p-[40px] pb-[72px] flex-shrink-0 cursor-pointer bg-gradient-to-b from-[rgba(37,111,65,0.5)] to-[rgba(2,4,2,0.5)] backdrop-blur-[10px]">
+                <div className="rounded-[10px] p-[39px] pb-[72px] flex-shrink-0 cursor-pointer bg-gradient-to-b from-[rgba(37,111,65,0.5)] to-[rgba(2,4,2,0.5)] backdrop-blur-[10px]">
                   <img src={item.icon} alt="" className="w-8 h-8" />
                   <h4 className="text-[24px] leading-[1.3] text-[#D9D9D9] mt-4 tracking-normal">
                     {item.text}

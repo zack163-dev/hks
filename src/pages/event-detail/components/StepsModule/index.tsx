@@ -14,6 +14,7 @@ interface ISteps {
   id: number;
   title: string[];
   img: string;
+  url?: string;
 }
 
 const steps: ISteps[] = [
@@ -48,15 +49,28 @@ export default function StepsModule(props?: IStepsModuleProps) {
     return allScheduleData.find((item) => item.id === id)?.data;
   }, [id]);
 
+  const eventDetailData = useMemo(() => {
+    return allScheduleData.find((item) => item.id === id)?.data;
+  }, [id]);
+
   const stepList = useMemo(() => {
     return steps.map((item) => {
       return {
         ...item,
         time:
           item.id === 1 ? scheduleData?.onlineTime : scheduleData?.onSiteTime,
+        url:
+          item.id === 1
+            ? eventDetailData?.typeformUrl
+            : eventDetailData?.lumaUrl,
       };
     });
-  }, [scheduleData]);
+  }, [
+    eventDetailData?.lumaUrl,
+    eventDetailData?.typeformUrl,
+    scheduleData?.onSiteTime,
+    scheduleData?.onlineTime,
+  ]);
 
   return (
     <div className={clsx("flex gap-[30px] justify-center", className)}>
@@ -69,6 +83,11 @@ export default function StepsModule(props?: IStepsModuleProps) {
             <img src={item.img} className="h-[18px] w-auto" />
             <div
               className="flex items-center justify-between w-full mt-6 cursor-pointer opacity-80 hover:opacity-100 transition-opacity duration-300"
+              onClick={() => {
+                if (item.url) {
+                  window.open(item.url, "_blank");
+                }
+              }}
               onMouseEnter={() => setHoveredStep(item.id)}
               onMouseLeave={() => setHoveredStep(null)}
             >

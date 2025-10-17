@@ -1,5 +1,6 @@
 // src/components/layout/Layout.tsx
 import { Outlet, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 import Header from "./header";
 import Footer from "./footer";
 import backImage from "@/assets/back.png";
@@ -7,6 +8,10 @@ import backImage from "@/assets/back.png";
 export default function Layout() {
   const location = useLocation();
   const isHome = location.pathname === "/";
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
 
   return (
     <div className="relative min-w-[1440px] mx-auto overflow-hidden">

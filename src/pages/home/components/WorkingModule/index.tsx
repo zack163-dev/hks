@@ -14,7 +14,7 @@ export default function WorkingModule(props?: IWorkingModuleProps) {
         className
       )}
     >
-      <h3 className="text-center text-[64px] font-bold gradient-text font-DMSansBold leading-[1] w-[543px]">
+      <h3 className="text-center text-[64px] font-bold gradient-text font-DMSansBold leading-[76px] w-[543px]">
         Working With The Best In AI
       </h3>
       <img src={aitools} alt="" className="w-[791.59px] h-[182px]" />

@@ -42,14 +42,14 @@ export default function PhaseModule(props?: IPhaseModuleProps) {
     >
       <div className="flex items-center gap-2">
         <span className="gradient-text text-[64px] leading-[1] font-DMSansBold font-bold">
-          PHASE
+          Phase
         </span>
       </div>
       <div className="grid grid-col gap-8">
         {dataList.map((item, index) => {
           return (
             <div className="flex gap-8 items-center text-[#D9D9D9]" key={index}>
-              <div className="flex items-center gap-[10px]">
+              <div className="flex items-center gap-[10px] w-[67px]">
                 <img
                   src={item.labelImg}
                   alt={item.title}

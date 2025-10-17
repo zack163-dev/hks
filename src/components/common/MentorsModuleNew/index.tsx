@@ -50,7 +50,7 @@ export default function MentorsModule(props?: IMentorsModuleProps) {
       )}
     >
       <div className="text-[64px] leading-[1] font-DMSansBold font-bold gradient-text">
-        {title ?? "MENTORS"}
+        {title ?? "Mentors"}
       </div>
       <div className="grid grid-cols-4 mt-12 gap-6">
         {mentorsList.map((item) => {

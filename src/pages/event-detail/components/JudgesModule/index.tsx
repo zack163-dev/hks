@@ -1,65 +1,67 @@
 import clsx from "clsx";
-import judges from "@/assets/judges.png";
-// import judgesRight from "@/assets/judges-right.jpg";
-
+// import judges from "@/assets/judges.png";
+import judgesRight from "@/assets/judges-right.png";
 interface IJudgesModuleProps {
   className?: string;
 }
 
-interface IJudges {
-  id: number;
-  name: string;
-  desc: string;
-  avatar: string;
-}
+// interface IJudges {
+//   id: number;
+//   name: string;
+//   desc: string;
+//   avatar: string;
+// }
 
-const data: IJudges[] = [
-  {
-    id: 1,
-    avatar: judges,
-    name: "Yuxi Li",
-    desc: "PhD in Computer Science at University of Alberta.",
-  },
-  {
-    id: 2,
-    avatar: judges,
-    name: "Yuxi Li",
-    desc: "PhD in Computer Science at University of Alberta.",
-  },
-  {
-    id: 3,
-    avatar: judges,
-    name: "Yuxi Li",
-    desc: "PhD in Computer Science at University of Alberta.",
-  },
-  {
-    id: 4,
-    avatar: judges,
-    name: "Yuxi Li",
-    desc: "PhD in Computer Science at University of Alberta.",
-  },
-  {
-    id: 5,
-    avatar: judges,
-    name: "Yuxi Li",
-    desc: "PhD in Computer Science at University of Alberta.",
-  },
-];
+// const data: IJudges[] = [
+//   {
+//     id: 1,
+//     avatar: judges,
+//     name: "Yuxi Li",
+//     desc: "PhD in Computer Science at University of Alberta.",
+//   },
+//   {
+//     id: 2,
+//     avatar: judges,
+//     name: "Yuxi Li",
+//     desc: "PhD in Computer Science at University of Alberta.",
+//   },
+//   {
+//     id: 3,
+//     avatar: judges,
+//     name: "Yuxi Li",
+//     desc: "PhD in Computer Science at University of Alberta.",
+//   },
+//   {
+//     id: 4,
+//     avatar: judges,
+//     name: "Yuxi Li",
+//     desc: "PhD in Computer Science at University of Alberta.",
+//   },
+//   {
+//     id: 5,
+//     avatar: judges,
+//     name: "Yuxi Li",
+//     desc: "PhD in Computer Science at University of Alberta.",
+//   },
+// ];
 
 export default function JudgesModule(props?: IJudgesModuleProps) {
   const { className } = props || {};
   return (
     <div
       className={clsx(
-        "pb-[160px] relative border-b border-transparent [border-image:linear-gradient(90deg,rgba(47,135,81,0)_0%,#1D5432_50%,rgba(65,186,111,0)_100%)_1]",
+        "pb-[452px] relative border-b border-transparent [border-image:linear-gradient(90deg,rgba(47,135,81,0)_0%,#1D5432_50%,rgba(65,186,111,0)_100%)_1]",
         className
       )}
     >
-      {/* <img
+      <img
         src={judgesRight}
         className="absolute bottom-0 right-0 w-[398.7px] h-auto"
-      /> */}
-      <div className="flex flex-col gap-12 w-[918.36px] mx-auto">
+      />
+      <div className="w-[920px] mx-auto rounded-[15px] px-[230px] h-[264px] text-center flex items-center justify-center text-[#D9D9D9] text-[32px] leading-[1.3] bg-[url('@/assets/judges-bg.png')] bg-cover bg-center">
+        Judges, Partners, and Sponsors - To Be Announced
+      </div>
+      {/* <div className="flex flex-col gap-12 w-[918.36px] mx-auto">
         <h3 className="text-[32px] leading-[1] font-DMSansBold font-bold text-white">
           JUDGES
         </h3>
@@ -78,7 +80,7 @@ export default function JudgesModule(props?: IJudgesModuleProps) {
             );
           })}
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

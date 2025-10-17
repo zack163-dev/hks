@@ -1,3 +1,10 @@
+export interface ITrackData {
+  id: string | number;
+  title: string;
+  description: string;
+  tags: string[];
+  partners: number;
+}
 export interface IRouteMap {
   id: number | string;
   country: string;
@@ -30,6 +37,8 @@ export interface IScheduleItem {
 export interface IScheduleData {
   onlineTime: string;
   onSiteTime: string;
+  typeformUrl: string;
+  lumaUrl: string;
   onSite: IScheduleItem[];
   online: IScheduleItem[];
 }

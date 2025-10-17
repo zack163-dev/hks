@@ -40,8 +40,8 @@ export default function EventDetailPage() {
       {!isHistoryData && (
         <>
           <ScheduleModule className="mt-[134px]" id={id || ""} />
-          <TracksModule className="mt-[140px]" />
-          <JudgesModule className="mt-[160px] mb-[160px]" />
+          <TracksModule className="mt-[140px]" id={id || ""} />
+          <JudgesModule className="mt-[160px] mb-[83px]" />
         </>
       )}
     </div>

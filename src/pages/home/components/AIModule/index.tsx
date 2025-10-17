@@ -13,7 +13,7 @@ export default function AIModule(props: IAIModuleProps) {
         className
       )}
     >
-      <h3 className="w-[500px] text-[64px] leading-[1] font-DMSansBold font-bold gradient-text">
+      <h3 className="w-[500px] text-[64px] leading-[76px] font-DMSansBold font-bold gradient-text">
         Build the Future of AI Agent
       </h3>
       <h4 className="w-[612px] text-[16px] leading-[1.3] text-[#D9D9D9]">

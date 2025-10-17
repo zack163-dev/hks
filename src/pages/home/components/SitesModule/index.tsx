@@ -6,6 +6,8 @@ import { useNavigate } from "react-router-dom";
 import { routeMap } from "@/config";
 import { ProgramStatus, type IRouteMap } from "@/types";
 import spoonLogo from "@/assets/spoon.svg";
+import neoLogo from "@/assets/neo-logo.svg";
+import neoLogoShadow from "@/assets/shadow.svg";
 import { useMemo } from "react";
 
 interface ISitesModuleProps {
@@ -62,6 +64,16 @@ export default function SitesModule(props: ISitesModuleProps) {
           src={sitesMap}
           alt="sitesMap"
           className="w-full object-cover bg-no-repeat"
+        />
+        <img
+          src={neoLogo}
+          alt="neoLogo"
+          className="absolute -top-[26.36px] left-[660.68px] h-[80px] w-auto"
+        />
+        <img
+          src={neoLogoShadow}
+          alt="neoLogoShadow"
+          className="absolute top-[16px] left-[660px]"
         />
         {routeMap
           .filter((i) => i.status !== ProgramStatus.NotExits)

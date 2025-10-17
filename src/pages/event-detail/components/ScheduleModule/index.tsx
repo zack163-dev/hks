@@ -1,7 +1,7 @@
 import { scheduleData as allScheduleData } from "@/config";
 import clsx from "clsx";
 import { useMemo, useState } from "react";
-// import scheduleLeft from "@/assets/schedule-left.png";
+import scheduleLeft from "@/assets/schedule-left.png";
 
 interface IScheduleModuleProps {
   className?: string;
@@ -43,10 +43,10 @@ export default function ScheduleModule(props?: IScheduleModuleProps) {
 
   return (
     <div className="w-full relative">
-      {/* <img
+      <img
         src={scheduleLeft}
         className="absolute -top-[62px] left-0 w-[398.7px] h-auto"
-      /> */}
+      />
       <div className={clsx("w-[926px] mx-auto flex flex-col", className)}>
         <h2 className="text-[32px] leading-[1] font-DMSansBold font-bold text-[#D9D9D9]">
           SCHEDULE

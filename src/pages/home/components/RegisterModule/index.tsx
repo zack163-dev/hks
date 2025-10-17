@@ -1,6 +1,6 @@
 import CommonButton from "@/components/common/CommonButton";
 import { clsx } from "clsx";
-import { startDate, prize } from "@/config";
+import { startDate, prize, docUrl } from "@/config";
 
 interface IRegisterModuleProps {
   className?: string;
@@ -17,6 +17,10 @@ export default function RegisterModule(props: IRegisterModuleProps) {
         block: "center",
       });
     }
+  };
+
+  const handleDocumentClick = () => {
+    window.open(docUrl, "_blank");
   };
   return (
     <div
@@ -51,7 +55,7 @@ export default function RegisterModule(props: IRegisterModuleProps) {
       </div>
       <div className="flex gap-4">
         <CommonButton onClick={handleRegisterClick}>Register</CommonButton>
-        <CommonButton>Document</CommonButton>
+        <CommonButton onClick={handleDocumentClick}>Document</CommonButton>
       </div>
     </div>
   );

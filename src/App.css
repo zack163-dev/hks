@@ -92,7 +92,7 @@
 
 @layer components {
   .gradient-bg-3 {
-    @apply bg-gradient-to-r from-[#58FF98] to-[#2F8E53];
+    @apply bg-gradient-to-r bg-[linear-gradient(91.91deg,#58ff9866_0%,#2f8e5366_100%)];
   }
 }
 
@@ -105,5 +105,11 @@
 @layer components {
   .gradient-border-2 {
     @apply border-transparent [border-image:linear-gradient(90deg,rgba(83,83,83,0.5)_0%,#535353_50%,rgba(83,83,83,0.5)_100%)_1];
+  }
+}
+
+@layer components {
+  .gradient-border-3 {
+    @apply border-transparent [border-image:linear-gradient(91.91deg,rgba(88,255,152,0.4)_0%,rgba(47,142,83,0.4)_100%)_1];
   }
 }

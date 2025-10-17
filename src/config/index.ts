@@ -1,4 +1,9 @@
-import type { IEventDetail, IRouteMap, IScheduleData } from "@/types";
+import type {
+  IEventDetail,
+  IRouteMap,
+  IScheduleData,
+  ITrackData,
+} from "@/types";
 import russiaFood from "@/assets/food/russia.png";
 import russiaFlag from "@/assets/country/russia.png";
 import indiaFood from "@/assets/food/india.png";
@@ -18,6 +23,7 @@ import vietnamFlag from "@/assets/country/vietnam.png";
 
 export const startDate = "OCT 2025";
 export const prize = "100,000";
+export const docUrl = "https://xspoonai.github.io/";
 
 export const routeMap: IRouteMap[] = [
   {
@@ -346,6 +352,8 @@ export const scheduleData: {
     data: {
       onlineTime: "2025.10.20-11.20",
       onSiteTime: "2025.11.23",
+      typeformUrl: "https://form.typeform.com/to/DsCvOuP4",
+      lumaUrl: "https://luma.com/5b10kb7g",
       onSite: [
         {
           timeRange: "09:00-10:00",
@@ -385,5 +393,56 @@ export const scheduleData: {
       ],
       online: [],
     },
+  },
+];
+
+export const tracksData: {
+  id: string | number;
+  data: ITrackData[];
+}[] = [
+  {
+    id: "russia",
+    data: [
+      {
+        id: 1,
+        title: "Onchain Workflows & Autonomous Execution",
+        description:
+          "Conduct multi-dimensional blockchain address investigationsrecognition.",
+        tags: ["Blockchain", "Dex", "Governance"],
+        partners: 156,
+      },
+      {
+        id: 2,
+        title: "Social Simulations & Gaming Layers",
+        description:
+          "Conduct multi-dimensional blockchain address investigations: Smart Money identification; Token holdings analysis; Rug pull blacklist verification; Celebrity wallet recognition.Rug pull blacklist verification; Celebrity wallet recognition.",
+        tags: ["Blockchain", "Dex", "Governance"],
+        partners: 156,
+      },
+      {
+        id: 3,
+        title: "Agent-Hosting Infrastructure & Security",
+        description:
+          "Conduct multi-dimensional blockchain address investigations: Smart Money identification; Token holdings analysis; Rug pull blacklist verification; Celebrity wallet recognition.Rug pull blacklist verification; Celebrity wallet recognition.",
+        tags: ["Blockchain", "Dex", "Governance"],
+        partners: 156,
+      },
+      {
+        id: 4,
+        title: "DeFi / NFT / Governance Intelligence",
+        description:
+          "Conduct multi-dimensional blockchain address investigations: Smart Money identification; Token holdings analysis; Rug pull blacklist verification; Celebrity wallet recognition.Rug pull blacklist verification; Celebrity wallet recognition.",
+        tags: ["Blockchain", "Dex", "Governance"],
+        partners: 12,
+      },
+      {
+        id: 5,
+        title: "BioTech",
+        description:
+          "Conduct multi-dimensional blockchain address investigationsrecognition.",
+        tags: ["Blockchain", "Dex", "Governance"],
+        partners: 6,
+      },
+    ],
   },
 ];
